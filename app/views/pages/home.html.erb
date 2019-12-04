@@ -1,0 +1,70 @@
+
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Alejandro Codeseira">
+  <meta name="description" content="Web test for Bio and Dojo data.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+  <link rel="stylesheet" media="(min-width:601px)" href="desktopStyle.css">
+  <link rel="stylesheet" media="(max-width:600px)" href="desktopStyleSmall.css">
+  <link rel="shortcut icon" href="images/icons/monitor.png" type="image/x-icon">
+  <script src="aditionals/anime-master/lib/anime.min.js" type="text/javascript"></script>
+  <script src="desktopAnimations.js" type="text/javascript"></script>  
+  <script type="text/javascript">
+    if ( navigator.userAgent.match(/Android/i)
+      || navigator.userAgent.match(/webOS/i)
+      || navigator.userAgent.match(/iPhone/i)
+      || navigator.userAgent.match(/iPad/i)
+      || navigator.userAgent.match(/iPod/i)
+      || navigator.userAgent.match(/BlackBerry/i)
+      || navigator.userAgent.match(/Windows Phone/i) ) { document.location = "mobile.htm"; }
+  </script>
+  <title>Hiryu Web</title>
+</head>
+
+<body onload="allIN()">
+  <div class="imagesContainerWrapper">
+    <div class="imagesContainer" id="shinobiContainer" onclick="hoverUPdojo()" >
+      <h2 id="dojoModuleTitle">Hiryu Dojo</h2>
+      <img id="shinobiImg" src="images/shinobi-fight.jpg" alt="Shinobi attack image.">
+    </div>
+    <div class="imagesContainer" id="aboutContainer" onclick="hoverUPabout()">
+      <h2 id="aboutModuleTitle">About Me</h2>
+      <img id="treeKamiImg" src="images/tree-kami.jpg" alt="Togakushi kamidana on treehole.">
+    </div>
+    <div class="imagesContainer" id="metroContainer" onclick="hoverUPmetro()">
+      <h2 id="metroModuleTitle">Metr0 Gaming</h2>
+      <img id="metroImg" src="images/logos/metro-logo-amarillo.png" alt="Metr0 logo amarillo.">
+    </div>
+  </div>
+
+  <div class="textContainerWrapper">
+    <div class="textContainer" id ="dojoTextContainer" >
+      <br>
+      <p>Hiryu Dojo es un grupo de Bujinkan Ninpo Budo Taijutsu,
+         coordinado por Alejandro Codeseira en Buenos Aires, Argentina.</p>
+      <p>Para conocer un poco mas de nuestra escuela, te invito a la web del grupo
+         al que pertenecemos. Para conocer itinerario de clases y lugares : </p>
+         <%= link_to ' - Asahiryu Dojo Website - ', 'http://bujinkanbuenosaires.com.ar/site', target:"_blank", rel:'nofollow' %>
+      <br>
+    </div>
+    <div class="textContainer" id="aboutTextContainer">
+      <p>
+      <p>Bienvenidos a mi web personal... !</p>
+      <p>Me dicen 'Code'. Actualmente vivo con mi pareja y nuestra gata, Kasei.</p>
+      <p>En mis ratos libres estudio programación para mejorar mis habilidades, trato de mantenerme lo más
+        actualizado que puedo en materia de estucturas Java, Android y Web.</p>
+      <p>Suelo viciar con videojuegos RPG, algún que otro MOBA.
+        También soy DM de rol de mesa, preferentemente D&D o Pathfinder.</p>
+    </div>
+    <div class="textContainer" id="metroTextContainer" >
+      <br>
+      <p>Co-Fundador de Metr0 Gaming.</p>
+      <p>Pronto más info acerca de las redes sociales donde podrán encontrar contenido y más info de nosotros.</p>
+    </div>
+    <div id="closeCrossContainer">
+      <img id="closeCross" src="images/icons/close_cross.png" onclick="closeModule()">
+    </div>
+  </div>
+  <footer id="footer">Ale Code || Hiryu Bs As Dojo || Powered by <%= link_to 'AnimeJs', 'https://animejs.com/', target: "_blank", rel: "nofollow" %></footer>
+</body>
