@@ -9,7 +9,7 @@
   <link rel="stylesheet" media="(max-width:600px)" href="desktopStyleSmall.css">
   <link rel="shortcut icon" href="images/icons/monitor.png" type="image/x-icon">
   <script src="aditionals/anime-master/lib/anime.min.js" type="text/javascript"></script>
-  <script src="desktopAnimations.js" type="text/javascript"></script>  
+  <script src="desktopAnimations.js" type="text/javascript"></script>
   <script type="text/javascript">
     if ( navigator.userAgent.match(/Android/i)
       || navigator.userAgent.match(/webOS/i)
@@ -23,6 +23,12 @@
 </head>
 
 <body onload="allIN()">
+
+  <h2>RAILS TESTING</h2>
+  <%= link_to 'go to DATABASE test', pages_testing_db_path %>
+
+  <br><br><br><br><br>
+
   <div class="imagesContainerWrapper">
     <div class="imagesContainer" id="shinobiContainer" onclick="hoverUPdojo()" >
       <h2 id="dojoModuleTitle">Hiryu Dojo</h2>
