@@ -17,6 +17,11 @@
     <td>
       <%= link_to "Show", article_path(article) %>
     </td>
+    <td>
+      <%= link_to "Delete", article_path(article), method: :delete, data: {confirm:"Sure?"} %>
+    </td>
   </tr>
   <% end %>
 </table>
+
+<p> <%= link_to 'Go Home', root_path %> </p>

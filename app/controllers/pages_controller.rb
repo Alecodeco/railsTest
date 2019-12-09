@@ -3,7 +3,7 @@ class PagesController < ApplicationController
   def home
   end
 
-  def testing_db
+  def about
   end
 
 
