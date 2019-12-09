@@ -8,7 +8,7 @@ before_action :set_article, only: [:edit, :update, :show, :destroy]
 
   def edit
   end
-  
+
   def show
   end
 
