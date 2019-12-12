@@ -3,15 +3,16 @@
   <meta charset="utf-8">
   <meta name="author" content="Alejandro Codeseira">
   <meta name="description" content="Web test for Bio and Dojo data.">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="shortcut icon" href="images/icons/monitor.png" type="image/x-icon">
-  <title>Hiryu Web</title>
 </head>
 
 <body>
 
-  <h2>RAILS TESTING</h2>
-  <p> <%= link_to 'go to AlphaBlog', articles_path %> </p>
-  <p> <%= link_to 'go to About page', pages_about_path %> </p>
+  <h1 class="center">HOME PAGE</h1>
+
+  <div class="center jumbotron">
+    <h1 class="display-4">ALPHA BLOG</h1>
+    <p class="lead"></p>
+    <%= link_to 'Sign up now!', '#', class: 'btn btn-warning btn-lg' %>
+  </div>
 
 </body>
