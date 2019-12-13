@@ -1,6 +1,9 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
-
+h1 {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
 #logo {
   float: left;
   font-size: 1.7em;
@@ -30,7 +33,6 @@
   font-weight: bold;
   text-shadow: 2px 2px black;
 }
-
 .footer {
   margin-top: 45px;
   padding-top: 5px;

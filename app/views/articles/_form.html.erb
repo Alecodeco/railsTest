@@ -1,24 +1,29 @@
-<% if @article.errors.any? %>
-<h2>Errors founded: </h2>
-<ul>
-  <% @article.errors.full_messages.each do |msg| %>
-  <li><%= msg %></li>
-  <% end %>
-</ul>
-<% end %>
+<%= render 'shared/errors', obj: @article %>
+<br>
 
-<%= form_for @article do |f| %>
-  <p>
-    <%= f.label :title %>
-    <br>
-    <%= f.text_field :title %>
-  </p>
-  <p>
-    <%= f.label :description %>
-    <br>
-    <%= f.text_area :description %>
-  </p>
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
+<div class="center">
+  <%= form_for @article do |f| %>
+    <div class="form-group row">
+      <div class="col-sm-2 col-form-label">
+        <%= f.label :title %>
+      </div>
+      <div class="col-md-9">
+        <%= f.text_field :title, class: 'form-control', placeholder: 'Title of article', autofocus: 'true' %>
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="col-sm-2 col-form-label">
+        <%= f.label :description %>
+      </div>
+      <div class="col-md-9">
+        <%= f.text_area :description, rows: 8, class: 'form-control', placeholder: 'Description of article' %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.submit class: 'btn btn-primary btn-md mx-auto' %>
+    </div>
+    <div class="form-group">
+      <%= link_to "Cancel and return", articles_path %>
+    </div>
+  <% end %>
+</div>
