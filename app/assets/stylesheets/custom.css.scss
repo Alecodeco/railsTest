@@ -19,7 +19,7 @@ h1 {
 .center {
   text-align: center;
 }
-.jumbotron {
+#jumbotron_home {
   background-image: url('temple.jpg');
   background-size: cover;
   height: 350px;
@@ -52,4 +52,11 @@ h1 {
 .footer ul li {
   float: left;
   margin-left: 15px;
+}
+.card-body {
+  background-color: #e6e6e6;
+}
+.article-actions {
+  border-top: 1px solid #333333;
+  padding-top: 10px;
 }
