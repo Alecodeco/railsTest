@@ -1,20 +1,21 @@
 <h2 align="center"><%= @article.title %></h2>
 
 <div class="card">
+  <div class="card-title">
+    <h5 class="center">Description:</h5>
+  </div>
   <div class="card-body">
-    <div class="card-title">
-      <h5 class="center">Description: </h5>
-    </div>
-    <div class="card-text">
+    <div class="card-text ">
       <%= simple_format(@article.description) %>
-      <div class="article-actions">
-        <%= link_to "Edit article", edit_article_path(@article), class:"btn btn-primary" %>
-        <%= " | " %>
-        <%= link_to "Delete article", article_path(@article), method: :delete, data: {confirm: "Sure?"},
-          class: "btn btn-danger" %>
-        <%= " | " %>
-        <%= link_to "Go back to List", articles_path, class:"btn btn-success" %>
-      </div>
+    </div>
+    <br>
+    <div class="article-actions">
+      <%= link_to "Edit article", edit_article_path(@article), class:"btn btn-primary" %>
+      <%= " | " %>
+      <%= link_to "Delete article", article_path(@article), method: :delete, data: {confirm: "Sure?"},
+        class: "btn btn-danger" %>
+      <%= " | " %>
+      <%= link_to "Go back to List", articles_path, class:"btn btn-success" %>
     </div>
   </div>
 </div>
