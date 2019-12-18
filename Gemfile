@@ -6,6 +6,7 @@ ruby '2.6.5'
 gem 'bootstrap', '~> 4.4.1'
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'bcrypt', '~> 3.1.7'
+gem 'rails_12factor'
 #
 #
 # gem 'therubyracer', platforms: :ruby
