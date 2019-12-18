@@ -5,6 +5,9 @@ ruby '2.6.5'
 
 gem 'bootstrap', '~> 4.4.1'
 gem 'bootstrap-sass', '~> 3.2.0'
+gem 'bcrypt', '~> 3.1.7'
+#
+#
 # gem 'therubyracer', platforms: :ruby
 gem 'mini_racer', platforms: :ruby
 gem 'jquery-rails'
