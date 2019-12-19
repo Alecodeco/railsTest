@@ -1,0 +1,39 @@
+<%= render 'shared/errors', obj: @user %>
+<br>
+
+<h1 class="center">Signup for Alpha Blog</h1>
+<br>
+<div class="center">
+  <%= form_for @user do |f| %>
+    <div class="form-group row offset-3">
+      <div class="col-sm-2 col-form-label">
+        <%= f.label :username %>
+      </div>
+      <div class="col-sm-4">
+        <%= f.text_field :username, class: 'form-control', placeholder: 'Enter username', autofocus: 'true' %>
+      </div>
+    </div>
+    <div class="form-group row offset-3">
+      <div class="col-sm-2 col-form-label">
+        <%= f.label :email %>
+      </div>
+      <div class="col-sm-4">
+        <%= f.email_field :email, class: 'form-control', placeholder: 'Enter email' %>
+      </div>
+    </div>
+    <div class="form-group row offset-3">
+      <div class="col-sm-2 col-form-label">
+        <%= f.label :password %>
+      </div>
+      <div class="col-sm-4">
+        <%= f.password_field :password, class: 'form-control', placeholder: 'Enter password' %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.submit "Signup", class: 'btn btn-primary btn-md mx-auto' %>
+    </div>
+    <div class="form-group">
+      <%= link_to "Cancel and return", articles_path %>
+    </div>
+  <% end %>
+</div>
