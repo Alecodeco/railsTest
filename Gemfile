@@ -7,11 +7,11 @@ gem 'bootstrap', '~> 4.4.1'
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'bcrypt', '~> 3.1.7'
 gem 'rails_12factor'
+gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 #
 #
 # gem 'therubyracer', platforms: :ruby
 gem 'mini_racer', platforms: :ruby
-gem 'jquery-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
 # Use Puma as the app server
