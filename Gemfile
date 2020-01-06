@@ -3,10 +3,12 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.5'
 
-gem 'bootstrap-sass'
 gem 'bcrypt', '~> 3.1.7'
 gem 'rails_12factor'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
+
+gem 'bootstrap', '~> 4.4.1'
+gem 'sassc', '~> 2.2', '>= 2.2.1'
 #
 #
 # gem 'therubyracer', platforms: :ruby
