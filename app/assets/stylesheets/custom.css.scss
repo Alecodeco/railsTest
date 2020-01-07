@@ -56,8 +56,12 @@ h1 {
 .card {
   background-color: #e6e6e6;
 }
-.card-title {
-  margin-top: 5px;
+.card-article-count {
+}
+.card-text, .article-description-list {
+  border-left: 2px solid black;
+  background-color: #cccccc;
+  padding: 5px;
 }
 .article-meta-details {
   margin-top: 10px;
@@ -66,12 +70,11 @@ h1 {
   border-top: 1px solid #333333;
   padding-top: 10px;
 }
-.card-text, .article-description-list {
-  border-left: 2px solid black;
-  background-color: #cccccc;
-  padding: 5px;
-}
 .article-actions-sm {
   margin: 15px 5px 15px 5px;
   border-top: 1px
+}
+.listing {
+  width: 35%;
+  margin: 10px auto 10px auto;
 }
