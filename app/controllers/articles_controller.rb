@@ -22,11 +22,11 @@ before_action :set_article, only: [:edit, :update, :show, :destroy]
   end
 
   def index
-    @article = Article.all
+    @article = Article.paginate(page: params[:page], per_page: 3)
   end
 
   def create
-    debugger
+    #debugger
     @article = Article.new(article_params)
     @article.user = User.first
     if @article.save

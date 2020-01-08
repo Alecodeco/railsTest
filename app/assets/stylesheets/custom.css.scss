@@ -54,9 +54,10 @@ h1 {
   margin-left: 15px;
 }
 .card {
-  background-color: #e6e6e6;
+  background-color: #e6e6e6;  
 }
-.card-article-count {
+.card-title {
+  margin-top: 10px;
 }
 .card-text, .article-description-list {
   border-left: 2px solid black;
@@ -77,4 +78,10 @@ h1 {
 .listing {
   width: 35%;
   margin: 10px auto 10px auto;
+}
+.pagination {
+  margin: 15px auto 10px auto;
+}
+.pagination * {
+  padding: 2px;
 }
