@@ -1,6 +1,12 @@
+<% if obj.length == 0 %>
+<div class="center">
+  <small>No articles to list</small>
+</div>
+<% end %>
+
 <% obj.each do |article| %>
 <div class="row">
-  <div class="card card-article-list col-sm offset-1">
+  <div class="card card-article-list col-sm-8 offset-2">
     <div class="card-title">
       <h4><strong><%= link_to article.title, article_path(article) %></strong></h4>
     </div>
@@ -13,12 +19,14 @@
           last updated: <%= time_ago_in_words(article.updated_at) %> </small>
       </div>
     <div class="article-actions-sm center">
+      <% if logged_in? && current_user==article.user %>
       <%= link_to "Edit", edit_article_path(article), class:"btn btn-outline-primary btn-sm" %>
       <%= " | " %>
       <%= link_to "Show", article_path(article), class:"btn btn-outline-success btn-sm" %>
       <%= " | " %>
       <%= link_to "Delete", article_path(article), method: :delete, data: {confirm:"Sure?"},
         class:"btn btn-outline-danger btn-sm" %>
+        <% end %>
     </div>
   </div>
 </div>

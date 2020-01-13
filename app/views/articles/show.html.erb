@@ -9,11 +9,13 @@
     </div>
     <br>
     <div class="article-actions">
-      <%= link_to "Edit article", edit_article_path(@article), class:"btn btn-primary" %>
-      <%= " | " %>
-      <%= link_to "Delete article", article_path(@article), method: :delete, data: {confirm: "Sure?"},
-        class: "btn btn-danger" %>
-      <%= " | " %>
+      <% if logged_in? && current_user==@article.user %>
+        <%= link_to "Edit article", edit_article_path(@article), class:"btn btn-primary" %>
+        <%= " | " %>
+        <%= link_to "Delete article", article_path(@article), method: :delete, data: {confirm: "Sure?"},
+          class: "btn btn-danger" %>
+          <%= " | " %>
+      <% end %>
       <%= link_to "Go back to List", articles_path, class:"btn btn-success" %>
     </div>
   </div>

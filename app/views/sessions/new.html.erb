@@ -1,0 +1,33 @@
+<h1 class="center">Login</h1>
+<br>
+
+<%= form_for(:session, url: login_path) do |f| %>
+
+<div class="row offset-2">
+  <div class="col-sm-2 col-form-label">
+    <%= f.label :email %>
+  </div>
+  <div class="col-md-6">
+    <%= f.email_field :email, class: 'form-control', placeholder: 'Enter email' %>
+  </div>
+</div>
+
+<div class="row offset-2">
+  <div class="col-sm-2 col-form-label">
+    <%= f.label :password %>
+  </div>
+  <div class="col-md-6">
+    <%= f.password_field :password, class: 'form-control', placeholder: 'Enter password', autocomplete: 'off' %>
+  </div>
+</div>
+<br>
+
+<div class="center">
+  <%= f.submit"Login", class: 'btn btn-primary btn-lg mx-auto'%>
+</div>
+<br>
+
+<div class="center">
+  <%= link_to "Cancel and return", root_path %>
+</div>
+<% end %>
