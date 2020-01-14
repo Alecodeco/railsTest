@@ -25,12 +25,15 @@
     <ul class="navbar-nav ml-auto">
       <% if logged_in? %>
       <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <button class="btn btn-primary dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <%= current_user.username %>
-          </a>
+            <% if current_user.admin? %>
+              <span class="badge badge-light" style="margin-left:5px;">Admin</span>
+            <% end %>
+          </button>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <%= link_to "Settings", edit_user_path(current_user), class:"dropdown-item" %>
-            <%= link_to "View profile", user_path(current_user), class:"dropdown-item" %>
+            <%= link_to "View profile", user_path(current_user), class:"dropdown-item" %>            
           </div>
       </li>
     </ul>

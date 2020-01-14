@@ -9,9 +9,13 @@
         <%= link_to gravatar_for(user, 50), user_path(user) %>
         [ <%= link_to user.username, user_path(user) %> ]
       </div>
-      <div class="card-footer">
+      <div class="card-footer center">
         <small>
           <%= pluralize(user.articles.count, "article") if user.articles %> posted so far.
+          <% if logged_in? && current_user.admin? %>
+            <hr>
+            <%= link_to "DELETE USER", user_path(user), class:"btn btn-danger btn-sm", method: :delete, data: { confirm: "Sure ?"} %>
+          <% end %>
         </small>
       </div>
     </div>

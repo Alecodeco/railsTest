@@ -1,10 +1,11 @@
 class UsersController < ApplicationController
 
   before_action :set_user, only: [:edit, :update, :show]
-  before_action :require_same_user, only: [:edit, :update]
+  before_action :require_same_user, only: [:edit, :update, :destroy]
+  before_action :require_admin, only: [:destroy]
 
   def set_user
-    @user = User.find(params[:id])
+    @user = User.find(params[:id])    
   end
 
   def new
@@ -33,6 +34,13 @@ class UsersController < ApplicationController
   def edit
   end
 
+  def destroy
+    @user = User.find(params[:id])
+    @user.destroy
+    flash[:danger] = "User and all articles were deleted"
+    redirect_to users_path
+  end
+
   def update
     if @user.update(user_params)
       flash[:success] = "Account info updated successfully"
@@ -50,6 +58,13 @@ class UsersController < ApplicationController
   def require_same_user
     if !logged_in? && current_user!= @user
       flash[:danger] = "You can only edit your own account"
+      redirect_to root_path
+    end
+  end
+
+  def require_admin
+    if logged_in? && !current_user.admin?
+      flash[:danger] = "Only Admin can do that."
       redirect_to root_path
     end
   end

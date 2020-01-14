@@ -19,7 +19,7 @@
           last updated: <%= time_ago_in_words(article.updated_at) %> </small>
       </div>
     <div class="article-actions-sm center">
-      <% if logged_in? && current_user==article.user %>
+      <% if logged_in? && (current_user == article.user || current_user.admin?) %>
       <%= link_to "Edit", edit_article_path(article), class:"btn btn-outline-primary btn-sm" %>
       <%= " | " %>
       <%= link_to "Show", article_path(article), class:"btn btn-outline-success btn-sm" %>
