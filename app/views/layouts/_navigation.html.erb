@@ -16,6 +16,11 @@
           <%= link_to "New Article", new_article_path, class:"dropdown-item" %>
         </div>
       </li>
+        <% if current_user.admin? %>
+        <li class="nav-item">
+          <%= link_to "Users", users_path, class: "nav-link" %>
+        </li>
+        <% end %>
       <% end %>
       <li class="nav-item">
         <%= link_to "About", pages_about_path, class: "nav-link" %>
@@ -33,7 +38,7 @@
           </button>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <%= link_to "Settings", edit_user_path(current_user), class:"dropdown-item" %>
-            <%= link_to "View profile", user_path(current_user), class:"dropdown-item" %>            
+            <%= link_to "View profile", user_path(current_user), class:"dropdown-item" %>
           </div>
       </li>
     </ul>

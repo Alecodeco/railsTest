@@ -6,10 +6,10 @@
   <div class="card listing" style="list-style-type:none">
     <div class="card-body">
       <div class="card-title">
-        <%= link_to gravatar_for(user, 50), user_path(user) %>
-        [ <%= link_to user.username, user_path(user) %> ]
+        <%= link_to gravatar_for(user, 80), user_path(user) %>
+        <%= link_to user.username, user_path(user), id:"users-card-title" %>
       </div>
-      <div class="card-footer center">
+      <div class="card-footer center" id="users-card-footer">
         <small>
           <%= pluralize(user.articles.count, "article") if user.articles %> posted so far.
           <% if logged_in? && current_user.admin? %>
