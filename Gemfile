@@ -10,6 +10,9 @@ gem 'will_paginate', '~> 3.1.0'
 gem 'bootstrap-will_paginate', '~> 0.0.10'
 gem 'bootstrap', '~> 4.4.1'
 gem 'sassc', '~> 2.2', '>= 2.2.1'
+gem 'rails-controller-testing'
+
+
 #
 #
 # gem 'therubyracer', platforms: :ruby

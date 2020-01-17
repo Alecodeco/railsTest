@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   before_action :require_admin, only: [:destroy]
 
   def set_user
-    @user = User.find(params[:id])    
+    @user = User.find(params[:id])
   end
 
   def new
@@ -17,7 +17,7 @@ class UsersController < ApplicationController
     if @user.save
       session[:user_id] = @user.id
       flash[:success] = "Welcome to the Alpha Blog #{@user.username}"
-      redirect_to user_path(:user)
+      redirect_to user_path(@user)
     else
       render 'new'
     end
