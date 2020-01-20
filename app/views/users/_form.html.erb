@@ -16,7 +16,7 @@
         <%= f.label :email %>
       </div>
       <div class="col-sm-4">
-        <%= f.email_field :email, class: 'form-control', placeholder: 'Enter email' %>
+        <%= f.email_field :email, class: "form-control", placeholder: "Enter email" %>
       </div>
     </div>
     <div class="form-group row offset-3">
@@ -24,14 +24,21 @@
         <%= f.label :password %>
       </div>
       <div class="col-sm-4">
-        <%= f.password_field :password, class: 'form-control', placeholder: 'Enter password' %>
+        <%= f.password_field :password, class: "form-control", placeholder: "Enter password" %>
       </div>
     </div>
     <div class="form-group">
-      <%= f.submit(@user.new_record? ? "Sign up" : "Update account", class: 'btn btn-primary btn-md mx-auto') %>
+      <%= f.submit(@user.new_record? ? "Sign up" : "Update account", class: "btn btn-primary btn-md mx-auto") %>
     </div>
     <div class="form-group">
       <%= link_to "Cancel and return", articles_path %>
     </div>
+  <hr>
   <% end %>
+  <br>
+  <div class="center">
+    <h5>DELETE ACCOUNT : (Warning! This cannot be undone.)</h5>
+    <br>
+    <%= link_to "DELETE USER", user_path(@user), class:"btn btn-danger btn-md", method: :delete, data: { confirm: "Sure ?"} %>
+  </div>
 </div>

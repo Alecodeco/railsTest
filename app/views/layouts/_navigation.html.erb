@@ -14,11 +14,13 @@
       </li>
       <% if logged_in? %>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">New... </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        <a class="nav-link dropdown-toggle" href="#" id="articleDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">New ... </a>
+        <div class="dropdown-menu" aria-labelledby="articleDropdownMenuLink">
           <%= link_to "Article", new_article_path, class:"dropdown-item" %>
+          <% if current_user.admin? %>
           <div class="dropdown-divider"></div>
           <%= link_to "Category", new_category_path, class:"dropdown-item" %>
+          <% end %>
         </div>
       </li>
       <% if current_user.admin? %>
@@ -32,13 +34,13 @@
     <ul class="navbar-nav ml-auto">
       <% if logged_in? %>
       <li class="nav-item dropdown">
-          <button class="btn btn-primary dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <button class="btn btn-primary dropdown-toggle" href="#" id="userDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <%= current_user.username %>
             <% if current_user.admin? %>
               <span class="badge badge-light" style="margin-left:5px;">Admin</span>
             <% end %>
           </button>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <div class="dropdown-menu" aria-labelledby="userDropdownMenuLink">
             <%= link_to "Settings", edit_user_path(current_user), class:"dropdown-item" %>
             <%= link_to "View profile", user_path(current_user), class:"dropdown-item" %>
           </div>
