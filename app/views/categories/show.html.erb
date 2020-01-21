@@ -1,0 +1,12 @@
+<h1 align="center">ARTICLES TAGGED AS: "<%= "#{@category.name.upcase}" %>"</h1>
+<h5 align="center">Total listed: <%= @category.articles.count %></h5>
+
+<div class="pagination">
+  <%= will_paginate @category_articles %>
+</div>
+
+<%= render "articles/article", obj: @category_articles %>
+
+<div class="pagination">
+  <%= will_paginate @category_articles %>
+</div>

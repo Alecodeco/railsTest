@@ -7,6 +7,12 @@
     <div class="card-text ">
       <%= simple_format(@article.description) %>
     </div>
+    <% if @article.categories.any? %>
+    <div class="article-meta-details">
+      <small>Tagged categories:</small>
+      <%= render @article.categories %>
+    </div>
+    <% end %>
     <br>
     <div class="article-actions">
       <% if logged_in? && (current_user == @article.user || current_user.admin?) %>

@@ -14,7 +14,7 @@
       </li>
       <% if logged_in? %>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="articleDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">New ... </a>
+        <a class="nav-link dropdown-toggle" href="#" id="articleDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">New </a>
         <div class="dropdown-menu" aria-labelledby="articleDropdownMenuLink">
           <%= link_to "Article", new_article_path, class:"dropdown-item" %>
           <% if current_user.admin? %>
