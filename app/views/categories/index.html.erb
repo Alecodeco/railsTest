@@ -1,22 +1,19 @@
 <h1 align="center">LISTING ALL CATEGORIES</h1>
 <br>
 
-<div class="row row-cols-2 w-50 offset-3">
-  <% @category.each_with_index do |category, index| %>
-  <% if index % 2 == 0 %>
-  <div class="col">
-    <div class="list-group center">
-      <%= link_to "#{category.name}", category_path(category), class:"h5 list-group-item list-group-item-action list-group-item-secondary" %>      
-    </div>
-  </div>
-  <% else %>
-  <div class="col">
-    <div class="list-group center">
+<div class="row ml-5">
+  <% @category.each do |category| %>
+    <div class="col-4 list-group center">
       <%= link_to "#{category.name}", category_path(category), class:"h5 list-group-item list-group-item-action list-group-item-secondary" %>
     </div>
-  </div>
-  <% end %>
+    <% if logged_in? and current_user.admin? %>
+    <div class="col-2 align-self-center list-group center align-items-start">
+      <p><%= link_to "Edit", edit_category_path(category), class:"badge badge-info" %></p>
+    </div>
+    <% end %>
   <% end %>
 </div>
 
-<%= will_paginate @category %>
+<div class="pagination">
+  <%= will_paginate @category %>
+</div>
