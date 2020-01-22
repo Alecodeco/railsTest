@@ -2,3 +2,10 @@
 <h1 class="center">Edit your account</h1>
 
 <%= render 'form' %>
+
+<br>
+<div class="center">
+  <h5>DELETE ACCOUNT : (Warning! This cannot be undone.)</h5>
+  <br>
+  <%= link_to "DELETE USER", user_path(@user), class:"btn btn-danger btn-md", method: :delete, data: { confirm: "Sure ?"} %>
+</div>
