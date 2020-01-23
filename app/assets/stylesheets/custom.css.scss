@@ -20,7 +20,7 @@ h1 {
   text-align: center;
 }
 #jumbotron_home {
-  background-image: url('temple.jpg');
+  background-image: url(asset_path("temple.jpg"));
   background-size: cover;
   height: 350px;
 }
